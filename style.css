@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f4f8;
+  color: #333;
+  background-image: linear-gradient(
+    to right top,
+    #070af0,
+    #006dff,
+    #00a0ff,
+    #00caff,
+    #60efff
+  );
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #00a0ff;
+  font-family: "Poppins", sans-serif;
+}
+
+header p {
+  color: #666;
+}
+
+.todo-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.todo-input input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #00a0ff;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.todo-input button {
+  padding: 10px;
+  border: none;
+  background-color: #00a0ff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: background 0.3s ease;
+}
+
+.todo-input button:hover {
+  background-color: #006dff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li button {
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+li button:hover {
+  background-color: #ff1f1f;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  .todo-input input,
+  .todo-input button {
+    font-size: 0.9rem;
+  }
+
+  li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Add delete animation */
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.deleting {
+  animation: fade-out 0.5s ease forwards;
+}
